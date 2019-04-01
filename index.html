@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
     <title>CMS kerfi</title>
 </head>
 <body>
-    
+  <div class="container">
+    <label for="name">Name:</label>
+    <input id="name" type="text">
+    <label for="year">Year:</label>
+    <input id="year" type="text">
+    <label for="url">Movieposter url:</label>
+    <input id="url" type="text">
+    <label for="rate">Rating:</label>
+    <input id="rate" type="text">
+  
+    <button>Add</button>
+    <div id="main"></div>
+  </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyDknGQVWQ4tSbVvyF0f6i9dsneyIxqCoUs",
+          authDomain: "lokaverkefni-79475.firebaseapp.com",
+          databaseURL: "https://lokaverkefni-79475.firebaseio.com",
+          projectId: "lokaverkefni-79475",
+          storageBucket: "lokaverkefni-79475.appspot.com",
+          messagingSenderId: "625220370214"
+        };
+        firebase.initializeApp(config);
+      </script>
+      
+    <script src="main.js"></script>
 </body>
+
 </html>
