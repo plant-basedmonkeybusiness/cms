@@ -1,4 +1,5 @@
 const db = firebase.firestore();
+const auth = firebase.auth();
 const mainDiv = document.querySelector('.container');
 
 
