@@ -51,7 +51,7 @@ searchBtn.addEventListener("click", () => {
                     let sciName = e.target.parentElement.querySelector('.sciName').innerHTML;
                     let inputInfo = e.target.parentElement.querySelector('.info').value;
                     let inputPrice = e.target.parentElement.querySelector('.price').value;
-                    let image = e.target.parentElement.querySelector('.img').value;
+                    // let image = e.target.parentElement.querySelector('.img').value;
 
 
                     db.collection("plants").doc(comName).set({
@@ -59,7 +59,7 @@ searchBtn.addEventListener("click", () => {
                         sciName: sciName,
                         price: inputPrice,
                         info: inputInfo,
-                        image: image
+                        // image: image
                     })
                 }
             }

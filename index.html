@@ -8,6 +8,73 @@
     <title>CMS kerfi</title>
 </head>
 <body>
+  <nav class="z-depth-0 grey lighten-4">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo">
+        <img src="img/logo.svg" style="width: 180px; margin-top: 10px;">
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="logged-in">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
+          </li>
+          <li class="logged-in">
+            <a href="#" class="grey-text" id="logout">Logout</a>
+          </li>
+          <li class="logged-in">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Guide</a>
+          </li>
+          <li class="logged-out">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+          </li>
+          <li class="logged-out">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+          </li>
+        </span>
+      </ul>
+    </div>
+  </nav>
+  <!-- SIGN UP MODAL -->
+  <div id="modal-signup" class="modal">
+    <div class="modal-content">
+      <h4>Sign up</h4><br />
+      <form id="signup-form">
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="signup-password" required />
+          <label for="signup-password">Choose password</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+      </form>
+    </div>
+  </div>
+  <!-- LOGIN MODAL -->
+  <div id="modal-login" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4><br />
+      <form id="login-form">
+        <div class="input-field">
+          <input type="email" id="login-email" required />
+          <label for="login-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="login-password" required />
+          <label for="login-password">Your password</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Login</button>
+      </form>
+    </div>
+  </div>
+  <!-- ACCOUNT MODAL -->
+  <div id="modal-account" class="modal">
+    <div class="modal-content center-align">
+      <h4>Account details</h4><br />
+      <div class="account-details"></div>
+      <div class="account-extras"></div>
+    </div>
+  </div>
 
   <label for="search">Search plant</label>
   <input placeholder="search plant" id="search">
@@ -21,19 +88,20 @@
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
     <script>
-        // Initialize Firebase
-        var config = {
-          apiKey: "AIzaSyDknGQVWQ4tSbVvyF0f6i9dsneyIxqCoUs",
-          authDomain: "lokaverkefni-79475.firebaseapp.com",
-          databaseURL: "https://lokaverkefni-79475.firebaseio.com",
-          projectId: "lokaverkefni-79475",
-          storageBucket: "lokaverkefni-79475.appspot.com",
-          messagingSenderId: "625220370214"
-        };
-        firebase.initializeApp(config);
+       var config = {
+        apiKey: "AIzaSyA00MbQRFIPqOihGdSu5m68Lf8Bc9wAUkE",
+        authDomain: "js-2-final.firebaseapp.com",
+        databaseURL: "https://js-2-final.firebaseio.com",
+        projectId: "js-2-final",
+        storageBucket: "js-2-final.appspot.com",
+        messagingSenderId: "857963247699"
+      };
+      firebase.initializeApp(config);
       </script>
       
     <script src="main.js"></script>
+    <script src="../frontend/auth.js"></script>
+
 </body>
 
 </html>
