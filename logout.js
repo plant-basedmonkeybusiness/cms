@@ -10,3 +10,5 @@ logout.addEventListener('click', (e) => {
     window.location.replace("../frontend/index.html");
   })
 });
+
+// sigrún 

@@ -104,7 +104,7 @@ searchBtn.addEventListener("click", () => {
         })
 })
 
-
+// Gummi + Hákon 
 
 
 
