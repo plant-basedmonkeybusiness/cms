@@ -4,81 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" rel="stylesheet">
     <title>CMS kerfi</title>
 </head>
 <body>
-  <nav class="z-depth-0 grey lighten-4">
-    <div class="nav-wrapper container">
-      <a href="#" class="brand-logo">
-        <img src="img/logo.svg" style="width: 180px; margin-top: 10px;">
-      </a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li class="logged-in">
-            <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
-          </li>
-          <li class="logged-in">
-            <a href="#" class="grey-text" id="logout">Logout</a>
-          </li>
-          <li class="logged-in">
-            <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Guide</a>
-          </li>
-          <li class="logged-out">
-            <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
-          </li>
-          <li class="logged-out">
-            <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
-          </li>
-        </span>
-      </ul>
+   <!-- NAVBAR -->
+   <nav class="navbar">
+    <div class="nav-left">
+        <a href="#" class="brand-logo">
+          <img src="../frontend/img/logo.svg">
+        </a>
     </div>
-  </nav>
-  <!-- SIGN UP MODAL -->
-  <div id="modal-signup" class="modal">
-    <div class="modal-content">
-      <h4>Sign up</h4><br />
-      <form id="signup-form">
-        <div class="input-field">
-          <input type="email" id="signup-email" required />
-          <label for="signup-email">Email address</label>
-        </div>
-        <div class="input-field">
-          <input type="password" id="signup-password" required />
-          <label for="signup-password">Choose password</label>
-        </div>
-        <button class="btn yellow darken-2 z-depth-0">Sign up</button>
-      </form>
+    <div class="nav-right">
+        <ul class="log-in">
+            <li class="logged-in">
+              <a href="#" id="logout">Log out</a>
+            </li>           
+            <li class="logged-out">
+              <a href="#" id="login-btn">Log in</a>
+            </li>
+            <li class="logged-out">
+              <a href="#" id="sign-up-btn">Sign up</a>
+            </li>
+          </span>
+        </ul>
+      </div>
+    </nav>
+  
+ 
+    <div class="container-wrapper">
+      <label for="search">Search plant:</label>
+      <input placeholder="search plant" id="search">
+      <button id="searchBtn">Search</button>
     </div>
-  </div>
-  <!-- LOGIN MODAL -->
-  <div id="modal-login" class="modal">
-    <div class="modal-content">
-      <h4>Login</h4><br />
-      <form id="login-form">
-        <div class="input-field">
-          <input type="email" id="login-email" required />
-          <label for="login-email">Email address</label>
-        </div>
-        <div class="input-field">
-          <input type="password" id="login-password" required />
-          <label for="login-password">Your password</label>
-        </div>
-        <button class="btn yellow darken-2 z-depth-0">Login</button>
-      </form>
-    </div>
-  </div>
-  <!-- ACCOUNT MODAL -->
-  <div id="modal-account" class="modal">
-    <div class="modal-content center-align">
-      <h4>Account details</h4><br />
-      <div class="account-details"></div>
-      <div class="account-extras"></div>
-    </div>
-  </div>
-
-  <label for="search">Search plant</label>
-  <input placeholder="search plant" id="search">
-  <button id="searchBtn">Search</button>
   
   <div class="container">
     
@@ -100,7 +60,7 @@
       </script>
       
     <script src="main.js"></script>
-    <script src="../frontend/auth.js"></script>
+   <script src="logout.js"></script>
 
 </body>
 
